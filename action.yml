@@ -1,0 +1,17 @@
+name: 'AI Architect Reviewer'
+description: 'Review Pull Requests for architectural flaws, security vulnerabilities, and tech debt using an external LLM.'
+author: 'Antigravity'
+inputs:
+  github-token:
+    description: 'The GitHub Token for API access.'
+    required: true
+    default: '${{ github.token }}'
+  llm-api-key:
+    description: 'The API key for the external LLM provider.'
+    required: true
+  license-key:
+    description: 'Optional license key for future monetization.'
+    required: false
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

@@ -1,0 +1,28 @@
+{
+  "name": "ai-architect-reviewer",
+  "version": "1.0.0",
+  "description": "A B2B GitHub Action to review Pull Requests for architectural flaws and tech debt using an external LLM.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt"
+  },
+  "keywords": [
+    "github-action",
+    "architecture",
+    "security",
+    "llm",
+    "review"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.3.3"
+  }
+}
